@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #Copyright 2010,2011 Brown University, Providence, RI.
 
                          #All Rights Reserved
@@ -19,7 +21,6 @@
 #ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 #OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#!/usr/bin/env python
 
 import sys
 import os, glob

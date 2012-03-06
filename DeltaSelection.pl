@@ -1,3 +1,6 @@
+#!/usr/bin/perl
+# Usage: perl delta.pl [max file]
+
 # Copyright 2010,2011 Brown University, Providence, RI.
 # 
 #                          All Rights Reserved
@@ -19,8 +22,6 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#!/usr/bin/perl
-# Usage: perl delta.pl [max file]
 
 my @valset;
 my @delta_index;
