@@ -1,0 +1,6 @@
+NEW IN RELEASE 0.9.1 ====================
+
+* Scripts for visualization in Cytoscape: see README.txt and
+  visualization.zip
+
+* Fixed code/connectedCompRandom.py bug for the computation of p-values.
