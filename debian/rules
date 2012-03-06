@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+PKG=hotnet0.9.1
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	install -d ./debian/$(PKG)/usr/lib/$(PKG)/INPUT
+	install -m755 DeltaSelection.pl ./debian/$(PKG)/usr/lib/$(PKG)/
+	install -m755 HotNet.py ./debian/$(PKG)/usr/lib/$(PKG)/
+	install -m755 findThreshold.py ./debian/$(PKG)/usr/lib/$(PKG)/
+	cp -a code ./debian/$(PKG)/usr/lib/$(PKG)/
+	cp -a example ./debian/$(PKG)/usr/lib/$(PKG)/
+	# TODO: Add shell wrappers to cd to above path and run

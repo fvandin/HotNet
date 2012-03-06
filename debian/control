@@ -1,0 +1,14 @@
+Source: hotnet0.9.1
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl, python
+Maintainer: Matthew Callaway <mcallawa@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://compbio.cs.brown.edu/projects/hotnet/
+
+Package: hotnet0.9.1
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, perl, python, matlab
+Description: HotNet is an algorithm for finding significanlty altered subnetworks in a large gene interaction network
+ HotNet is an algorithm for finding significanlty altered subnetworks in a large gene interaction network
