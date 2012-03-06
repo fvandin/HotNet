@@ -1,0 +1,21 @@
+#! /bin/sh
+# wrapper script for HotNet.py in the hotnet package 
+version=0.9.1
+pkg_with_version=hotnet$version
+path=/usr/lib/$pkg_with_version
+executable=HotNet.py
+
+# make sure executable exists under path
+if [ ! -x "$path/$executable" ]; then
+    echo "$pkg: program does not exist under $path: $prog"
+    exit 2
+fi
+
+# set up environment
+PATH=$path:$PATH
+export PATH
+
+# also adjust library paths as needed...
+
+# execute program (should be in path now)
+exec $executable "$@"
