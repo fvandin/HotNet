@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 PKG=hotnet0.9.1
+VER=0.9.1
 
 %:
 	dh $@
@@ -9,12 +10,14 @@ override_dh_auto_install:
 	dh_auto_install
 	install -d ./debian/$(PKG)/usr/lib/$(PKG)/INPUT
 	install -d ./debian/$(PKG)/usr/bin
-	install -m755 DeltaSelection.pl ./debian/$(PKG)/usr/lib/$(PKG)/
+	install -d ./debian/$(PKG)/var/tmp/$(PKG)
+	ln -s /var/tmp/$(PKG)/tmp ./debian/$(PKG)/usr/lib/$(PKG)/tmp
 	install -m755 HotNet.py ./debian/$(PKG)/usr/lib/$(PKG)/
+	install -m755 DeltaSelection.pl ./debian/$(PKG)/usr/lib/$(PKG)/
 	install -m755 findThreshold.py ./debian/$(PKG)/usr/lib/$(PKG)/
+	install -m755 bin-versioned-wrappers/hotnet ./debian/$(PKG)/usr/bin/hotnet$(VER)
+	install -m755 bin-versioned-wrappers/hotnet-deltaselection ./debian/$(PKG)/usr/bin/hotnet-deltaselection$(VER)
+	install -m755 bin-versioned-wrappers/hotnet-findthreshold ./debian/$(PKG)/usr/bin/hotnet-findthreshold$(VER)
 	cp -a code ./debian/$(PKG)/usr/lib/$(PKG)/
 	cp -a example ./debian/$(PKG)/usr/lib/$(PKG)/
-	ln -s /var/tmp/$(PKG)/tmp ./debian/$(PKG)/usr/lib/$(PKG)/tmp
-	install -m 755 DeltaSelection0.9.1 ./debian/$(PKG)/usr/bin/
-	install -m 755 HotNet0.9.1 ./debian/$(PKG)/usr/bin/
-	install -m 755 findThreshold0.9.1 ./debian/$(PKG)/usr/bin/
+

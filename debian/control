@@ -9,6 +9,6 @@ Homepage: http://compbio.cs.brown.edu/projects/hotnet/
 
 Package: hotnet0.9.1
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}, perl, python, matlab
+Depends: ${perl:Depends}, ${misc:Depends}, perl, python
 Description: HotNet is an algorithm for finding significanlty altered subnetworks in a large gene interaction network
  HotNet is an algorithm for finding significanlty altered subnetworks in a large gene interaction network
